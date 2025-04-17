@@ -8,49 +8,45 @@ namespace MyPlaylist
 {
     internal class MasterClas
     {
-        private int Edad;
-        private string NombreCompleto;
-        private string Dni;
+        private int _Edad;
 
-
-        public MasterClas(int edad, string nombre, string dni)
+        public int Edad
         {
-            Edad = edad;
-            NombreCompleto = nombre;
-            Dni = dni;
+            get => _Edad;
+            set => _Edad = value;
+        }
+
+        private string _NombreCompleto;
+        public string NombreCompleto
+        {
+            get => _NombreCompleto;
+            set => _NombreCompleto = value;
         }
 
 
-        public int getEdad()
+        private string _Dni;
+
+        public string Dni
         {
-            return Edad;
+            get => _Dni;
+            set => _Dni = value;
         }
 
-        public void setEdad(int edad)
+        private string _Correo;
+        public string Correo
         {
-            this.Edad = edad;
+            get => _Correo;
+            set => _Correo = value;
         }
 
-
-        public String getNombreCompleto()
+        public MasterClas(int edad, string nombre, string dni, string correo)
         {
-            return NombreCompleto;
+            _Edad = edad;
+            _NombreCompleto = nombre;
+            _Dni = dni;
+            _Correo= correo;
         }
-
-        public void setNombreCompleto(string nombre)
-        {
-            this.NombreCompleto = nombre;
-        }
-
-        public String getDni()
-        {
-            return Dni;
-        }
-
-        public void setDni(string dni)
-        {
-            this.Dni = dni;
-        }
+       
 
     }
 
